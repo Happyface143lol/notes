@@ -25,14 +25,18 @@
 
 `--help` Shows more information on how to use the command or program.
 
-`man` Turns the terminal into a page with a description of the command and its options. We can use the arrows or `B` and `Spacebar` to skip up and down by a full page. We can use `/word` to search for a word. We can move between hits by using `N` and `Shift + N`. To quit, use `Q`.
+`man` Turns the terminal into a page with a description of the command and its options. 
+* We can use the arrows or `B` and `Spacebar` to skip up and down by a full page. 
+* We can use `/word` to search for a word. 
+* We can move between hits by using `N` and `Shift + N`. 
+* To quit, use `Q`.
 
 `cd` Changes the shell's current directory.
 
-//cd alone returns to your home directory.
+* cd alone returns to your home directory.
 
-//if it starts with /, it means that it searches from the root of the computer. (Absolute path)  
-//if not, it starts from where we are. (Relative Path)
+* if it starts with /, it means that it searches from the root of the computer. (Absolute path)  
+* if not, it starts from where we are. (Relative Path)
 
 ```
 ~: Means the current user's home directory. Only works if it's the first in the path.
