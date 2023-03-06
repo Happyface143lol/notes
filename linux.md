@@ -3,11 +3,13 @@
 
 `Control` + `C` Kill a process or cancel an execution of a program.
  
-```terminal
+```bash
 clear #Clears the terminal.
+```
 
-# Help
+##### Help
 
+```bash
 [command] --help #Shows more information on how to use the command or program.
 
 man [command] #Turns the terminal into a page with a description of the command and its options. 
@@ -15,9 +17,11 @@ man [command] #Turns the terminal into a page with a description of the command 
 	# We can use `/word` to search for a word. 
 	# We can move between hits by using `N` and `Shift + N`. 
 	# To quit, use `Q`.
+```
 
-# Navigation
+##### Navigation
 
+```bash
 cd [path] #Changes the shell's current directory.
 
 cd #Returns to your home directory.
@@ -29,9 +33,11 @@ cd - #Goes back to the previous directory.
 	# if not, it starts from where we are (Relative Path).
 
 pwd #Shows the current working directory.
+```
 
-# Content information
+##### Content information
 
+```bash
 ls [path] # Lists the contents of the [path] directory.
 
 ls -F # Indicates the type of files and directories.
@@ -70,10 +76,12 @@ head -n [number] [path] # Shows the last [number] lines of the [path].
 
 echo [text/command] # Prints text
 
+[command1] | [command2] # Passes the output of the first command to the second command. | is a pipe.
+```
 
+##### Files related 
 
-# Files related 
-
+```bash
 mkdir [path] # Makes a directory.
 mkdir -p # Allows to create a directory with nested subdirectories in a single operation.
 	# Don't use spaces, begin with -, and stick with letters, numbers, periods, dashes and underscores.
@@ -102,12 +110,6 @@ p*.txt # Only shows files that start with p.
 
 	#The wildcards can be combined.
 	#When the shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the preceding command. As an exception, if a wildcard expression does not match any file, Bash will pass the expression as an argument to the command as it is.
-
-# Pipes and tubes
-
-[command1] | [command2] # Passes the output of the first command to the second command. | is a pipe.
-
-
 ```
 
 
