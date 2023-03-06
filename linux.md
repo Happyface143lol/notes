@@ -2,8 +2,8 @@
 ### Terminal
 
 `Control` + `C` Kill a process or cancel an execution of a program.
-
-```
+ 
+```terminal
 clear #Clears the terminal.
 
 # Help
