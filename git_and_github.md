@@ -1,3 +1,33 @@
+# Git basic workflow
+
+## Github setup
+
+1. Create a new repository.
+2. Give a name and check "Add a README file". Then, click on create repository.
+3. Copy SSH URL.
+4. Now clone the repository, with:
+* `git clone [SSH url].`
+
+## Git Workflow
+
+1. `git add [file]`
+2. `git commit -m "Message"`
+3. `git push`
+
+`git status` To see the status of the files.
+
+`git log` To see the log.
+
+## Messages
+
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+7. Wrap the body at 72 characters
+8. Use the body to explain what and why vs. how
+
 #### What is git? 
 It's like a save button for your files and directories. Oficially, it's a
 version control system. A version control system specifically designed to 
@@ -56,24 +86,5 @@ clone is really a full backup of all the data.
 
 This allows you to set up several types of workflows that aren’t possible in 
 centralized systems, such as hierarchical models.
-
-# Git basic workflow
-
-## Github setup
-
-1. Create a new repository.
-2. Give a name and check "Add a README file". Then, click on create repository.
-3. Copy SSH URL.
-4. Now clone the repository, with:
-* `git clone [SSH url].`
-
-## Git Workflow
-
-1. `git add [file]`
-2. `git commit -m "Message"`
-3. `git push`
-
-`git status` To see the status of the files.
-`git log` To see the log.
 
 
