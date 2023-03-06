@@ -60,8 +60,11 @@ wc -w [path] # Shows only the number of words.
 wc -m [path] # Shows only the number of characters.
 
 cat [path] # Shows what it contains. 
-less [path] # Displays a screenful of a file, and then stops. It's better than cat, and we can go forward one screenful with the spacebar or back one by pressing b. Press q to quit.
-cut -d [delimiter], -f [number] # Cuts out certain sections of each line, expecting the lines to be separated into columns by a tab. -d is used to specify a delimiter, which is [delimiter]. -f is to specify the column's number.
+less [path] # Displays a screenful of a file, and then stops. It's better than cat, and we can go 
+	    # forward one screenful with the spacebar or back one by pressing b. Press q to quit.
+cut -d [delimiter], -f [number] # Cuts out certain sections of each line, expecting the lines to be 
+	    # separated into columns by a tab. -d is used to specify a delimiter, which is [delimiter]. 
+	    # -f is to specify the column's number.
 uniq # filters out the adjacent matching lines
 uniq -c # counts the numbers of times a line occurs in its input.
 
@@ -100,7 +103,8 @@ mv -i thesis/draft.txt thesis/quotes.txt # Ask for confirmation before overwriti
 mv x.txt .. # Moves the file to the parents directory.
 mv thesis/quotes.txt # Moves the file to the current directory.
 
-cp [old] [new] # Copies a file. If it's given more than one file, it copies it to a directory, and it copies it to the last argument.
+cp [old] [new] # Copies a file. If it's given more than one file, it copies it to a directory, 
+	       # and it copies it to the last argument.
 cp -r thesis thesis_backup # Copies a directory.
 
 *.txt # Represents zero or more characters. It's a wildcard.
@@ -108,8 +112,10 @@ p*.txt # Only shows files that start with p.
 
 ?.txt # Only represents one character. It's also a wildcard.
 
-	#The wildcards can be combined.
-	#When the shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the preceding command. As an exception, if a wildcard expression does not match any file, Bash will pass the expression as an argument to the command as it is.
+	# The wildcards can be combined.
+	# When the shell sees a wildcard, it expands the wildcard to create a list of matching 
+        # filenames before running the preceding command. As an exception, if a wildcard expression 
+	# does not match any file, Bash will pass the expression as an argument to the command as it is.
 ```
 
 
