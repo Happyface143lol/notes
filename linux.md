@@ -1,2 +1,2 @@
-#Linux
-###Terminal commands
+# Linux
+### Terminal commands
