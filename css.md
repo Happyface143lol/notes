@@ -165,7 +165,7 @@ inside of `ancestor`, no matter how deep.
 .ancestor .contents {
     /* some declarations */
 }
-```<
+```
 
 ### Properties
 
