@@ -32,6 +32,7 @@ We can use ! in VS code to generate all of the template in one go.
 	  # like screen readers.
 <i></i> # It also makes the text italic, but it isn't affected by the screen readers.
 <!-- --> # Comments
+<div></div> # It's a simple container.
 ```
 
 ## Lists
@@ -49,11 +50,15 @@ We can use ! in VS code to generate all of the template in one go.
 		      # 'A' for uppercase letters. 'i' for lowercase Roman numerals
 		      # 'I' for uppercase Roman numerals. '1' for numbers (default)
 	<li value="x" # For the list number to change to number x.
+<dl> # Description Lists
+    <dt><dt> # Description term 
+    <dd><dd> # Description element
+<dl>
 ```
 
 ## Links and images
 
-```
+```html
 <a href="protocol://domain/path">Text Link</a> # Absolute Links, links
 	# to other websites.
 <a href="./pages/about.html">About</a> # Relative Links, links to another page on
@@ -71,11 +76,11 @@ information on the webpage. It stands for Hypertext Markup Language.
 Almost all elemenets are just pieces of content wrapped in opening and closing
 HTML tags. 
 
+![Tags](images/element_html.png)
+
 Opening tags tell it's the start of an HTML element. `<>`
 
-Closing tags tell where an element ends. `<\>
-
-![element_html](Images/element_html.png)
+Closing tags tell where an element ends. `</>`
 
 There are some HTML elements that do not have a closing tag. 
 

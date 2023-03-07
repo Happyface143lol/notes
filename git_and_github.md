@@ -6,7 +6,7 @@
 2. Give a name and check "Add a README file". Then, click on create repository.
 3. Copy SSH URL.
 4. Now clone the repository, with:
-* `git clone [SSH url].`
+`git clone [SSH url].`
 
 ## Git Workflow
 
