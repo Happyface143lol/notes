@@ -77,6 +77,13 @@ you place on an HTML element.
 }
 ```
 
+To select all the [element] elements in an element, like article, we write:
+```css
+.[class] [element]{
+    color: red;
+}
+```
+
 ###### ID Selectors
 They select an element with a give ID, which is an another attribute you 
 place on an HTML element.
@@ -167,19 +174,122 @@ inside of `ancestor`, no matter how deep.
 }
 ```
 
+### The Box Model
+
+##### Parts of the box
+
+* Content box: It's the area where the content is displayed.
+
+* Padding: It's the space between the border of a box and the content of the box.
+
+* Border: It's the space between the margin and the padding. The size of it is added
+	to the `width` and `height`. Each border can have a style, width and color we can
+	manipulate.
+
+* Margin: It's the space between the borders of a box and the borders of the 
+	adjacent boxes. It's not counted to the actual size of the box. It can have positive
+	or negative values. We can use negative values to overlap other things. If two vertically
+	adjacent elements have a margin set on them and their margins touch, only
+	the larger margin remains, this is called margin collapsing.
+
+```css
+/* Box */
+margin-[left/right/top/bottom]: [number/auto]px; /* Margin on the [left/right/top/bottom].
+	To center it, have margin left and right in auto. */
+padding-[left/right/top/bottom]: [number]px; /* Adds some space between 
+	the content and sides */
+padding: [number]px; /* Adds space between the content and sides in all directions */
+border: [number]px [color] [type]; /* Creates a border with the line size of [number],
+	, using the [color] and the [type]. */
+
+box-sizing: border-box; /* Allows us to include the padding and border in an
+	element's total width and height. */
+
+/* To save time, you can also do */
+
+margin: [top] [right] [bottom] [left]; /* If there's any missing, it's assumed that 
+	it's based on the ones defined. If only one missing, it's margin is [top]
+	[left-and-right] [bottom] */
+
+margin: [number] auto; /* The value of auto tells the browser to define the margin for you.
+	In most cases, it'll be equivalent to 0, or whatever space is available. However,
+	it's quite handy for HORIZONTAL centering. */
+
+```
+
+Display specifies how an element would be treated, and the layout of its children.
+
+```css
+display: [option];
+```
+If the [option] is:
+
+* `block`: the box will break into a new line, the width and height are respected
+the padding, margin and border will cause other elements to be pushed away 
+from the box, and if the width is not specified, the box will extend in the
+inline direction to fill the space available in its container. 
+
+* `inline`: the box will not break, width and height do not apply
+everything about the box (padding, size, etc.) VERTICALLY will apply but 
+will not cause other inline boxes to move away from the box, but everything 
+about the box HORIZONTALLY will apply AND will cause other inline boxes 
+to move away from the box.
+
+* `flex`: the element will use the outer display type block but the inner 
+display type to flex, and any direct children will become flex items.
+
+* `inline-block`: it doesn't break into a new line but it'll respect the 
+width and height. Everything about the box, will cause the other elements to 
+be pushed away.
+
+##### Normal Flow
+
+The elements that are laid out by default are using the box model. By default,
+a block level element's content fills the available inline space of the 
+parent element containing it and the element grows along the block dimension 
+to accommodate its content.
+
+The size of inline elements is just the size of their content. You can't set width
+and height, apart from images. We need to use `display: inline-block` or 
+`display: block`, so that we can control the size.
+
+The normal layout flow (mentioned in the layout introduction article) is the 
+system by which elements are placed inside the browser's viewport. By 
+default, block-level elements are laid out in the block flow direction, 
+which is based on the parent's writing mode. Each element will appear on a 
+new line below the last one, with each one separated by whatever margin 
+that's been specified.
+
+Inline elements all sit on the same line along with any adjacent text content,
+as long as there is space to do so. If not, it'll move down to a new line.
+
+### Flexbox
+It's a way to arrange items into rows or columns. These items will grow and shrink
+(flex, basically) based on simple rules you can define.
+
 ### Properties
 
 ```css
-/* Color and background-color */
+/* Color */
 p {
     color: [color]; /* Set an element's text color. */
-    background: [color]; /* Set the background color of an element. */
+    background-color: [color]; /* Set the background color of an element. */
     /* We can use HEX, RGB, and HSL values. */
+    border-color: [color]; /* Sets the edges of the element to that color. */
 }
 ```
 
 ```css
-/* Typography Basics and Text-Align */
+/* Size */
+p {
+    width: [number][px/%]; /* Sets the width to the pixels or the % of the parent */
+    max-width: [number][px/%]; /* To prevent the contents from growing too wide */
+    height: [number]px; /* Sets the height to the [number]px */
+}
+```
+
+```css
+/* Text */
 p {
     font-family: [font], [font]; /* Determine what font an element uses */
     font-family: sans-serif; /* Generic family names */
@@ -190,20 +300,35 @@ p {
 
     font-size: [number]px; /* Sets the size of the font */
     font-weight: [number between 1-1000 OR a keyword]; /* Affects the boldness of the text */
-    text-align: [center/left/right] /* Align the text horizontally within an element */
+    text-align: [center/left/right]; /* Align the text horizontally within an element */
+    font-style: [normal/italic/oblique]; /* Sets whether a font should be from the [] */ 
 }
 ```
 
 ```css
-/* Image Height and Width */
+/* Image */
 img {
-  height: auto; /* With auto, image will be the same proportions */
-  width: 500px;
+    height: auto; /* With auto, image will be the same proportions */
+    width: 500px;
+}
+
+p {
+    background-image: url([link]); /* Adds a background image to the parent */
 }
 
 /* It's best to include both of these properties, as stating a height and width,
 reserves a space for the image on the page. A blank space will be there
 until the image loads. */
+```
+
+```css
+/* Links */
+a:visited{ /* Pseudo-selector */
+    [property]: [property value]; /* [property] happens when it has been visited */
+}
+a:hover{ 
+    [property]: [property value]; /* [property] happens when the cursor hovers over it */
+}
 ```
 
 ### Cascade

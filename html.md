@@ -9,6 +9,9 @@
 			       # symbols and chars from diff languages correctly.
 	<title>[title]</title> # It's used to give the webpages a readable title,
 				    # displayed in the webpage's browser tab.
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- So that the styling of the page looks similar on mobile as well as
+	on a desktop or laptop -->
     </head>
     <body>
 	# Where all the content displayed will go. 
@@ -20,8 +23,9 @@ We can use ! in VS code to generate all of the template in one go.
 
 ## Text
 ```html
-<p></p> # To write a paragraph of text, even if you put two paragraphs in one of these
-	# it'll display as one.
+<p></p> <!-- To write a paragraph of text, even if you put two paragraphs in one of these
+	 it'll display as one. If you place them next to each other, without ANY space,
+	 it'll appear in the same line. -->
 <h1></h1> # These are text displayed larger and bolder than other texts. H1 is the largest,
 	  # h6 is the smallest heading.
 <strong></strong> # It makes the text bold, it also marks text as important. This
@@ -31,8 +35,18 @@ We can use ! in VS code to generate all of the template in one go.
 <em></em> # It makes the text italic. It also places emphasis, which affect things
 	  # like screen readers.
 <i></i> # It also makes the text italic, but it isn't affected by the screen readers.
-<!-- --> # Comments
-<div></div> # It's a simple container.
+<!-- --> <!-- Comments -->
+<div></div> <!-- It's a simple container. It's a block-level by default, and it is
+	    normally used to group other elements. It also allow us to divide the page
+	    into different blocks and apply styling to those blocks.
+<span></span> <!-- It's an inline-level element. It can be used to group text
+	      content and inline HTML elements for styling, and should be used when
+	      when no other semantic HTML element is appropriate. -->
+<article> <!-- Contains elements that have related information. It doesn't render 
+	  anything, but we can use CSS to style it. -->
+    <!-- insert things, like p, h2... -->
+</article>
+<hr> <!-- Creates an horizontal line, to separate sections in a webpage -->
 ```
 
 ## Lists
