@@ -1,3 +1,7 @@
+### What is CSS? 
+It's a popular style sheet language that adds style to the plain elements of 
+HTML, it gives the information color, font, and makes it look cool.
+
 ### Adding CSS to HTML
 ###### External CSS
 Involves creating a separate file for the CSS and linking it inside of an HTML's
@@ -199,8 +203,9 @@ margin-[left/right/top/bottom]: [number/auto]px; /* Margin on the [left/right/to
 padding-[left/right/top/bottom]: [number]px; /* Adds some space between 
 	the content and sides */
 padding: [number]px; /* Adds space between the content and sides in all directions */
-border: [number]px [color] [type]; /* Creates a border with the line size of [number],
+border: [number]px [style] [color]; /* Creates a border with the line size of [number],
 	, using the [color] and the [type]. */
+	/* [style]: double, solid, dotted */
 
 box-sizing: border-box; /* Allows us to include the padding and border in an
 	element's total width and height. */
@@ -264,8 +269,15 @@ Inline elements all sit on the same line along with any adjacent text content,
 as long as there is space to do so. If not, it'll move down to a new line.
 
 ### Flexbox
-It's a way to arrange items into rows or columns. These items will grow and shrink
-(flex, basically) based on simple rules you can define.
+It . These items will grow and shrink
+(flex, basically) based on simple rules you can define. The elements will try to fill
+the available area will each have equal width.
+
+* Flex container: is any element that has `display: flex`. 
+* Flex item: is any element that is inside of a flex container. 
+
+![Basic_syntax_css](images/basic_syntax_css.jpg)
+![flex_container_item] (images/flex_container_item.jpg)
 
 ### Properties
 
@@ -274,10 +286,49 @@ It's a way to arrange items into rows or columns. These items will grow and shri
 p {
     color: [color]; /* Set an element's text color. */
     background-color: [color]; /* Set the background color of an element. */
-    /* We can use HEX, RGB, and HSL values. */
+    /* We can use HEX, RGB, and HSL values.
+	RGB --> rgb([0-255 red],[0-255 green],[0-255 blue]); (In RGB, when
+	the primary colors are combined, it creates pure white)
+
+	RGBA --> rgb([0-255 red],[0-255 green],[0-255 blue], [0-100% / 0-1 alpha value]); 
+	(In RGB, when the primary colors are combined, it creates pure white)
+
+        HEX --> #[00-FF red][00-FF green][00-FF blue][00-FF alpha channel]; 
+        (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F)
+ 
+        HSL --> hsl([0-360 HUE], [0-100 saturation]%, [0-100 lightness]%);
+        (0 HUE is red, 120 HUE is green, 240 HUE is blue)
+
+	HSLA --> hsl([0-360 HUE], [0-100 saturation]%, [0-100 lightness]%, 
+	[0-100% / 0-1 alpha value]);
+    */
+
     border-color: [color]; /* Sets the edges of the element to that color. */
+
+    opacity: [0-1 / 0 - 100%]; /* Controls how opaque or transparent an element is */
+
+    box-shadow: [[number] offsetX] [[number] offsetY] [[number] blurRadius] 
+    [[number] spreadRadius] [color];
+}
+
+/* Color: Gradient*/
+div{
+   background: [gradient]; /* Because the gradient function creates an image 
+	element, and the background element accepts an image as a value */
+
+   /* [Gradient] 
+	linear-gradient([0-360 gradientDirection]deg, [color1],[color2], ...);
+	    [Gradientdirection] is a number that indicates the direction of the line.
+	    [Color1] and [color2] are color arguments, which are the colors used 
+	    in the transition. They can be hex, rgb, hsl or keywords.	
+	    
+	linear-gradient(..., [color1] [color-stop][px/%],[color2], ...);
+	    [color-stop] is a length unit that continues a color in the 
+	    linear-gradient.
+   */
 }
 ```
+
 
 ```css
 /* Size */
@@ -379,8 +430,3 @@ beats inheritance
 
 ###### Order
 Whichever rule was the last defined is the winner.
-
-
-##### What is CSS? 
-It's a popular style sheet language that adds style to the plain elements of 
-HTML, it gives the information color, font, and makes it look cool.
