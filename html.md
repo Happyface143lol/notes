@@ -1,12 +1,9 @@
 ## Default template of an HTML document
 ```html
-<!DOCTYPE html> # It's to tell the browser what version of HTML it should render the document.
-<html lang="en"> # lang specifies the language of the text content in that element. It's used
-		 # to improve accesibility of the webpage.
-    <head> # Where we put important meta-information about webpages, and stuff
-	   # requiered for our webpages to render correctly in the browser.
-        <meta charset="utf-8"> # It ensures that the webpage will display special
-			       # symbols and chars from diff languages correctly.
+<!DOCTYPE html> <!-- It's to tell the browser what version of HTML it should render the document. -->
+<html lang="en"> <!-- lang specifies the language of the text content in that element. It's used to improve accesibility of the webpage. -->
+    <head> <!-- Where we put important meta-information about webpages, and stuff requiered for our webpages to render correctly in the browser. -->
+        <meta charset="utf-8"> <!-- It ensures that the webpage will display special symbols and chars from diff languages correctly. -->
 	<title>[title]</title> # It's used to give the webpages a readable title,
 				    # displayed in the webpage's browser tab.
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -113,11 +110,15 @@ These elements makes HTML easier to read and help with Search Engine Optimizatio
 ## Form
 
 ```html
-<form action="[url]"> <!-- Form indicates that it's a form -->
-                      <!-- Action tells where the form data should be sent -->
+<form action="[url]" method="[method]"> <!-- Form indicates that it's a form -->
 
-    <input type="[type]" name="[name]"> <!-- Type is a self-Closing element that 
-	allows you several ways to collect data -->
+    <!-- Action tells where the form data should be sent -->
+
+	<!-- Method specifies how to send form-data to the URL specified. It can be sent via a GET request as URL parameters, or via a POST request as data in the request body -->
+
+		<!-- GET is used to request data from a specified resource, POST is used to send data to a server to create/update a resource https://www.w3schools.com/tags/ref_httpmethods.asp -->
+
+    <input type="[type]" name="[name]"> <!-- Type is a self-Closing element that allows you several ways to collect data. It lets the browser know what kind of data it should be. By default is text. -->
 	<!-- Name is an attribute that assigns a value to represent the 
 	data being submitted -->
 
@@ -130,25 +131,25 @@ These elements makes HTML easier to read and help with Search Engine Optimizatio
     <input type="text"> <!-- Form that asks for text -->
     <input type="radio"> [button_name] <!-- Form to select the ones, with circle -->
     <input type="checkbox"> [button_name] <!-- Form that uses checkboxes -->
+	<input type="email"> <!-- Only allows emails with @ and .-->
+    <input type="password"> <!-- Obcures the input, and warns if the site does not use HTTPS -->
+
+
 
     <input type="[type]" name="[name]"> [button_name] <!-- So that it selects
 	only one button, ALL buttons must have a name attribute with the same value -->
-    <input type="[type]" value="[value]"> <!-- To know which button they've selected,
-	bcs the form data sends the name and value attributes -->
+    <input type="[type]" value="[value]"> <!-- To know which button they've, bcs the form data sends the name and value attributes -->
 
     <input type="[type]" checked> <!-- So that it is checked by default -->
 
-    <label><input type="[type]">[button_name]</label> <!-- If you click [name], it selects
-	the corresponding radio button. It associates the text for an input element
-	with the input element itself -->
+    <label><input type="[type]">[button_name]</label> <!-- If you click [button_name], it selects
+	the corresponding radio button. It associates the text for an input element with the input element itself -->
     <input type="[type]" id="[id]"><label for="[id]">[button_name]</label> 
 	<!-- Another way to associate an input element's text with the element
 	itself -->
 
-    <fieldset> <!-- To group related inputs and labers together in a web form, they
-		all appear on a new line -->
-	  <legend>[legend]</legend> <!-- Acts a caption for the content in the fieldset,
-				    it provides context of the form -->
+    <fieldset> <!-- To group related inputs and labers together in a web form, they all appear on a new line -->
+	  <legend>[legend]</legend> <!-- Acts a caption for the content in the fieldset, it provides context of the form -->
 	
 	<!-- insert input -->
 

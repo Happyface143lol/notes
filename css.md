@@ -101,6 +101,7 @@ place on an HTML element.
     background-color: red;
 }
 ```
+
 The difference between classes and IDs is that an element can only have one
 ID, it cannot be repeated on a single page, and it shouldn't contain any
 whitespace.
@@ -125,8 +126,7 @@ When two groups of elements share some of their style declarations.
 ```
 
 ###### Chaining Selectors
-It selects any element that has both [class1] AND [class2]. There isn't any space and
-it works for chaining any combination of selectors, except for type selectors.
+It selects any element that has both [class1] AND [class2]. There isn't any space and it works for chaining any combination of selectors, except for type selectors.
 
 ```html
 <div>
@@ -329,7 +329,6 @@ div{
 }
 ```
 
-
 ```css
 /* Size */
 p {
@@ -338,6 +337,10 @@ p {
     height: [number]px; /* Sets the height to the [number]px */
 }
 ```
+
+`vh` stands for viewport height, and is relative to 1% of the height of the viewport.
+
+`rem` stands for root `em`, and is relative to the font size of the html element. 
 
 ```css
 /* Text */
